@@ -1,13 +1,13 @@
 function copyDiscord() {
     Swal.fire({
         title: "Discord",
-        text: "Copy username or open in new tab?",
+        text: "Copy username or open my profile in new tab?",
         icon: "question",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#3085d6",
         confirmButtonText: "Copy",
-        cancelButtonText: "Open in new tab"
+        cancelButtonText: "Open profile in new tab"
       }).then((result) => {
         if (result.isConfirmed) {
           Swal.fire({

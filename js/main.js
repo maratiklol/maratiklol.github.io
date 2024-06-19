@@ -31,3 +31,24 @@ function multiFuncs() {
         console.log("Welcome!")
     }
 }
+
+function multiFuncs() {
+    console.log("Hello World!")
+    console.log("Very interesting, isn't it?")
+    console.log("-------------------------------")
+    var visited = getCookie('visited');
+    if (visited) {
+        console.log("Welcome back!")
+    } else {
+        setCookie('visited',true,1337);
+        console.log("Welcome!")
+    }
+    var lost = getCookie('lost');
+    if (lost) {
+        console.log("Oh, there's nothing here! Again...")
+    } else {
+        setCookie('lost',true,1337);
+        console.log("Oh, there's nothing here!")
+    }
+}
+

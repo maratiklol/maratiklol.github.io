@@ -32,7 +32,7 @@ function multiFuncs() {
     }
 }
 
-function multiFuncs() {
+function multiFuncs404() {
     console.log("Hello World!")
     console.log("Very interesting, isn't it?")
     console.log("-------------------------------")

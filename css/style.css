@@ -159,6 +159,18 @@ body {
   height: 50px;
 }
 
+.hosted {
+  color: #909090;
+  text-decoration: none;
+}
+
+.hosted:hover {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 12px;
+}
+
 .horiz {
   display: flex;
   flex-direction: row;
@@ -173,10 +185,12 @@ body {
   padding: 20px;
   box-shadow: 0 0 5px #00000020;
   font-family: Mont;
+  font-size: 20px;
 }
 
+
 .credits {
-  font-size: 10px;
+  font-size: 12px;
   margin-top: 5px;
   color: #909090;
 }

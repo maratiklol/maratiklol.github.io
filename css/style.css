@@ -159,12 +159,12 @@ body {
   height: 50px;
 }
 
-.hosted {
+.supportme {
   color: #909090;
   text-decoration: none;
 }
 
-.hosted:hover {
+.supportme:hover {
   color: #ffffff;
   text-decoration: none;
   cursor: pointer;

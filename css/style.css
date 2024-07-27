@@ -194,6 +194,20 @@ body {
   color: #909090;
 }
 
+.mainpage {
+  font-size: 25px;
+  margin-top: 25px;
+  color: #909090;
+}
+
+.mainpage:hover {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 25px;
+  margin-top: 25px;
+}
+
 .listbtn:active {color: #FFFFFF20;}
 
 .actbtns {

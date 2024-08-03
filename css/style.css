@@ -105,6 +105,14 @@ body {
     font-family: Montserrat;
 }
 
+.age {
+    cursor: pointer;
+}
+
+.cityWiki {
+    cursor: pointer;
+}
+
 .socials {
     font-size: 25px;
     font-weight: 300;
@@ -136,7 +144,7 @@ body {
     text-decoration: none;
     border-radius: 20px;
     transition: .2s;
-    margin: 0 auto;
+    margin: 3px;
     font-family: "Montserrat";
     font-size: 16px; 
     font-weight: bold; 
@@ -156,6 +164,7 @@ body {
     display: flex;
     justify-content: center;
 }
+
 
 .data {
     font-size: 20px;

@@ -3,7 +3,7 @@ function sleep(ms) {
 }
 
 async function dynamicTitle() {
-    const titles = ["mrksbgg", "mrksbgg >.<"];
+    const titles = ["mrksbgg", "mrksbgg >.s<"];
     let index = 0;
 
     while (true) {

@@ -1,9 +1,4 @@
 
 # mrksbgg.is-a.dev
 
-My website where you can find links with my profiles on network.
-
-## Made by:
-
-- [@mrksbgg](https://www.github.com/mrksbgg) (myself)
-
+мой сайт с открытым кодом. сделан в стиле [Material You (Monet).](https://m3.material.io/)

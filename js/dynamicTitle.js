@@ -8,7 +8,7 @@ async function dynamicTitle() {
 
     while (true) {
         document.title = titles[index];
-        await sleep(300);
+        await sleep(500);
 
         index++;
         

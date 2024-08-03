@@ -24,7 +24,7 @@ async function dynamicTitle404() {
 
     while (true) {
         document.title = titles[index];
-        await sleep(1000);
+        await sleep(500);
 
         index++;
         

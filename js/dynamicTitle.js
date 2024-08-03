@@ -19,7 +19,7 @@ async function dynamicTitle() {
 }
 
 async function dynamicTitle404() {
-    const titles = ["404", "ты потерялся"];
+    const titles = ["где же я...?", "ты потерялся"];
     let index = 0;
 
     while (true) {

@@ -3,12 +3,12 @@ function sleep(ms) {
 }
 
 async function dynamicTitle() {
-    const titles = ["m", "mr", "mrk", "mrks", "mrksb", "mrksbg", "mrksbgg", "mrksbg", "mrksb", "mrks", "mrk", "mr"];
+    const titles = ["mrksbgg", "mrksbgg >.<"];
     let index = 0;
 
     while (true) {
         document.title = titles[index];
-        await sleep(300);
+        await sleep(200);
 
         index++;
         

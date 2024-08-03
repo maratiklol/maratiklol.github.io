@@ -52,6 +52,19 @@ body {
     --md-sys-color-surface-container-highest: rgb(54 52 58);
 
     background: var(--md-sys-color-background);
+
+    cursor: default;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+.pointer {
+    cursor: pointer;
 }
 
 .header {
@@ -105,14 +118,6 @@ body {
     font-family: Montserrat;
 }
 
-.age {
-    cursor: pointer;
-}
-
-.cityWiki {
-    cursor: pointer;
-}
-
 .socials {
     font-size: 25px;
     font-weight: 300;
@@ -122,7 +127,7 @@ body {
 }
 
 .socialsheader {
-    margin-top: 15px;
+    margin-top: 25px;
     margin-bottom: 10px;
     font-size: 25px;
     font-weight: 300;

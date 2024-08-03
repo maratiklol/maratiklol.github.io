@@ -8,3 +8,8 @@ function playWiggle() {
         document.getElementById("name").textContent = "mrksbgg";
    });
 }
+
+function playMarat() {
+    var audio = new Audio('./assets/sounds/марат.mp3');
+    audio.play();
+}

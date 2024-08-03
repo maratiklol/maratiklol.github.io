@@ -2,8 +2,8 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function dynamicTitle404() {
-    const titles = ["где я?", "ты потерялся."];
+async function dynamicTitle() {
+    const titles = ["mrksbgg", "mrksbgg >.<"];
     let index = 0;
 
     while (true) {
@@ -18,8 +18,8 @@ async function dynamicTitle404() {
     }
 }
 
-async function dynamicTitle() {
-    const titles = ["mrksbgg", "mrksbgg >.<"];
+async function dynTitle404() {
+    const titles = ["где я?", "ты потерялся."];
     let index = 0;
 
     while (true) {

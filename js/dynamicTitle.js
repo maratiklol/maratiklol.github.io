@@ -17,3 +17,19 @@ async function dynamicTitle() {
         }
     }
 }
+
+async function dynamicTitle404() {
+    const titles = ["404", "ты потерялся"];
+    let index = 0;
+
+    while (true) {
+        document.title = titles[index];
+        await sleep(1000);
+
+        index++;
+        
+        if (index === titles.length) {
+            index = 0;
+        }
+    }
+}

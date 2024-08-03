@@ -54,6 +54,13 @@ body {
     background: var(--md-sys-color-background);
 }
 
+.header {
+    padding: 16px;
+    margin: 0px;
+    width: auto;
+    height: auto;
+}
+
 .main {
     font-size: 25px;
     font-weight: 600;
@@ -63,7 +70,17 @@ body {
     font-family: Montserrat;
 }
 
-.whoami {
+.name {
+    font-size: 35px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-align: center;
+    flex-direction: row;
+    color: white;
+    font-family: Montserrat;
+}
+
+.aka {
     font-size: 25px;
     font-weight: 300;
     text-align: center;
@@ -72,7 +89,14 @@ body {
     font-family: Montserrat;
 }
 
-.aka {
+.aboutme {
+    padding: 16px;
+    margin: 0px;
+    width: auto;
+    height: auto;
+}
+
+.whoami {
     font-size: 25px;
     font-weight: 300;
     text-align: center;
@@ -89,13 +113,6 @@ body {
     font-family: Montserrat;
 }
 
-.header {
-    padding: 16px;
-    margin: 0px;
-    width: auto;
-    height: auto;
-}
-
 .socialsheader {
     margin-top: 15px;
     margin-bottom: 10px;
@@ -104,13 +121,6 @@ body {
     text-align: center;
     color: white;
     font-family: Montserrat;
-}
-
-.aboutme {
-    padding: 16px;
-    margin: 0px;
-    width: auto;
-    height: auto;
 }
 
 .socialsbuttons {

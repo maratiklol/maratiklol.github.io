@@ -17,9 +17,9 @@
             await fetchCommitDate();
             await fetchCommitMessage();
             console.time("page loaded in");
-            await sleep(150);
-            document.getElementById('preloader').classList.add('hidden'); 
             await sleep(250);
+            document.getElementById('preloader').classList.add('hidden'); 
+            await sleep(350);
             document.getElementById('preloader').style.display = 'none';
             console.timeEnd("page loaded in")
         }

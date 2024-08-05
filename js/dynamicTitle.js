@@ -8,9 +8,11 @@ async function dynamicTitle() {
     let titles;
   
     while (true) {
-        if (window.location.href === `${url}/404`) { 
+        if (window.location.href === url + "/404") {
             titles = ["где я?", "ты потерялся."];
-        } else if (window.location.href === `${url}/`) {
+        } else if (window.location.href === url) { 
+            titles = ["mrksbgg", "mrksbgg >.<"];
+        } else { 
             titles = ["mrksbgg", "mrksbgg >.<"];
         }
 

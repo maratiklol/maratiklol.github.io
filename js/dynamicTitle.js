@@ -4,11 +4,11 @@ function sleep(ms) {
 
 async function dynamicTitle() {
     let index = 0;
-    const url = "https://mrksbgg.is-a.dev";
+    const url = "https://mrksbgg.is-a.dev/";
     let titles;
   
     while (true) {
-        if (window.location.href === `${url}/404.html`) { 
+        if (window.location.href === `${url}/404`) { 
             titles = ["где я?", "ты потерялся."];
         } else if (window.location.href === `${url}/`) {
             titles = ["mrksbgg", "mrksbgg >.<"];

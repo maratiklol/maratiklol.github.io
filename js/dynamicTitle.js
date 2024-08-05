@@ -12,7 +12,8 @@ async function dynamicTitle() {
     } else if (window.location.href === url) {
       titles = ["mrksbgg", "mrksbgg >.<"];
     } else {
-      titles = ["mrksbgg", "mrksbgg >.<"]; 
+      titles = ["mrksbgg", "mrksbgg >.<"];
+      console.log(document.title)
     }
   
     while (true) {

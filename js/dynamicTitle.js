@@ -13,7 +13,6 @@ async function dynamicTitle() {
       titles = ["mrksbgg", "mrksbgg >.<"];
     } else {
       titles = ["mrksbgg", "mrksbgg >.<"];
-      console.log(document.title)
     }
   
     while (true) {

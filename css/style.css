@@ -214,3 +214,28 @@ body {
     color: white;
     font-family: Montserrat;
 }
+
+#invisibleLink:link{
+    color:white;
+    text-decoration: none; 
+}
+
+#invisibleLink:visited{
+    color:white;
+    text-decoration: none; 
+}
+
+#invisibleLink:hover{
+    color:white;
+    text-decoration: none; 
+}
+
+#invisibleLink:focus{
+    color:white;
+    text-decoration: none; 
+}
+
+#invisibleLink:active{
+    color:white;
+    text-decoration: none; 
+}

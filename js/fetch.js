@@ -12,7 +12,7 @@ function fetchCommitMessage() {
     fetch('https://api.github.com/repos/mrksbgg/mrksbgg.github.io/commits?per_page=1')
     .then(res => res.json())
     .then(res => {
-        document.getElementById('commitMessage').innerHTML = res[0].commit.message;
+        document.getElementById('commitMessage').innerHTML = `<a target="_blank" href="${res[0].html_url}" id="invisibleLink">${res[0].commit.message}</a>`;
     });
 }
 

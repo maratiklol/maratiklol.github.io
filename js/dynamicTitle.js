@@ -6,8 +6,8 @@ async function dynamicTitle() {
     let index = 0;
     const url = "https://mrksbgg.is-a.dev/";
     let titles;
-    
-    if (window.location.href === url + "404") {
+
+    if (document.title === "ты потерялся.") {
       titles = ["где я?", "ты потерялся."];
     } else if (window.location.href === url) {
       titles = ["mrksbgg", "mrksbgg >.<"];
@@ -27,4 +27,4 @@ async function dynamicTitle() {
         }
       }
     }
-  }
+}

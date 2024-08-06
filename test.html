@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mrksbgg</title>
+    <meta name="description" content="mrksbgg | сайт">
+    <link rel="shortcut icon" href=".//assets/favicon.ico">
+    <link rel="manifest" href=".//assets/site.webmanifest">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/dynamicTitle.js" type="text/javascript"></script>
+    <script src="/js/fetch.js" type="text/javascript"></script>
+    <script>
+        async function loadPage() {
+            dynamicTitle();
+            await fetchCommitDate();
+            await fetchCommitMessage();
+            console.time("page loaded in");
+            await sleep(250);
+            document.getElementById('preloader').classList.add('hidden'); 
+            await sleep(350);
+            document.getElementById('preloader').style.display = 'none';
+            console.timeEnd("page loaded in")
+        }
+    </script>
+</head>
+<body onload="loadPage()">
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="header">
+        <a class="main">
+            <div class="name">mrksbgg</div>
+            <div class="aka">также известен как <b>kreewxq, chapmanreeed.</b></div>
+        </a>
+    </div>
+
+    <div class="aboutme">
+        <a class="whoami">
+            <div class="nameage">я <b>марат,</b> мне <b>15.</b></div>
+            <div class="city">живу в <b>казани.</b></div>
+            <div class="bd">день рождения: <b>18 февраля.</b></div>
+        </a>
+
+        <a class="socials">
+            <div class="socialsheader"><b>где я обитаю:</b></div>
+            <div class="socialsbuttons">
+                <a target="_blank" href="https://t.me/chapmanreeed" class="button-primary">Telegram</a>
+                <a target="_blank" href="https://github.com/mrksbgg" class="button-primary">GitHub</a>
+                <a target="_blank" href="https://steamcommunity.com/id/kreewxq" class="button-primary">Steam</a>
+                <a target="_blank" href="https://discord.com/users/1097383143708827679" class="button-primary">Discord</a>
+                <a target="_blank" href="https://youtube.com/@kreewxq" class="button-primary">YouTube</a>
+                <a target="_blank" href="https://instagram.com/mrksbgg" class="button-primary">Instagram</a>
+            </div>
+        </a>
+    </div>
+
+    <div id="footer">
+        <a class="data">последнее обновление сайта: <b id="commitDate">нет данных...</b></a>
+        <a class="data">что нового: <b id="commitMessage">нет данных...</b></a>
+    </div>
+</body>
+</html>

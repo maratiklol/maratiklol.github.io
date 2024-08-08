@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family="Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 body {
     --md-sys-color-primary: rgb(208 188 254);
@@ -63,6 +64,15 @@ body {
 
 }
 
+.main {
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    flex-direction: row;
+    color: white;
+    font-family: "JetBrains Mono";
+}
+
 .pointer {
     cursor: pointer;
 }
@@ -74,15 +84,6 @@ body {
     height: auto;
 }
 
-.main {
-    font-size: 25px;
-    font-weight: 600;
-    text-align: center;
-    flex-direction: row;
-    color: white;
-    font-family: Montserrat;
-}
-
 .name {
     font-size: 35px;
     margin-bottom: 10px;
@@ -90,16 +91,16 @@ body {
     text-align: center;
     flex-direction: row;
     color: white;
-    font-family: Montserrat;
+    font-family: "JetBrains Mono";
 }
 
 .aka {
     font-size: 25px;
-    font-weight: 300;
+    font-weight: 200;
     text-align: center;
     flex-direction: row;
     color: white;
-    font-family: Montserrat;
+    font-family: "JetBrains Mono";
 }
 
 .aboutme {
@@ -111,29 +112,29 @@ body {
 
 .whoami {
     font-size: 25px;
-    font-weight: 300;
+    font-weight: 200;
     text-align: center;
     flex-direction: row;
     color: white;
-    font-family: Montserrat;
+    font-family: "JetBrains Mono";
 }
 
 .socials {
     font-size: 25px;
-    font-weight: 300;
+    font-weight: 200;
     text-align: center;
     color: white;
-    font-family: Montserrat;
+    font-family: "JetBrains Mono";
 }
 
 .socialsheader {
     margin-top: 25px;
     margin-bottom: 10px;
     font-size: 25px;
-    font-weight: 300;
+    font-weight: 200;
     text-align: center;
     color: white;
-    font-family: Montserrat;
+    font-family: "JetBrains Mono";
 }
 
 .socialsbuttons {
@@ -150,7 +151,7 @@ body {
     border-radius: 20px;
     transition: .2s;
     margin: 3px;
-    font-family: "Montserrat";
+    font-family: "JetBrains Mono";
     font-size: 16px; 
     font-weight: bold; 
     cursor: pointer;
@@ -196,46 +197,4 @@ body {
     100% {
       transform: rotate(360deg);
     }
-}
-
-#footer {
-    bottom: 0;
-    height: 40px;
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.data {
-    font-size: 20px;
-    font-weight: 300;
-    text-align: center;
-    color: white;
-    font-family: Montserrat;
-}
-
-#invisibleLink:link{
-    color:white;
-    text-decoration: none; 
-}
-
-#invisibleLink:visited{
-    color:white;
-    text-decoration: none; 
-}
-
-#invisibleLink:hover{
-    color:white;
-    text-decoration: none; 
-}
-
-#invisibleLink:focus{
-    color:white;
-    text-decoration: none; 
-}
-
-#invisibleLink:active{
-    color:white;
-    text-decoration: none; 
 }

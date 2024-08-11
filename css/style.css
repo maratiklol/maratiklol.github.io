@@ -162,39 +162,3 @@ body {
     color: var(--md-sys-color-on-primary-container);
     transition: .2s;
 }
-
-#preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--md-sys-color-background);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    transition: opacity 0.5s ease-in-out
-}
-
-#preloader.hidden {
-    opacity: 0;
-} 
-
-.spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid var(--md-sys-color-primary);
-    border-top-color: #1a1a1a;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-}

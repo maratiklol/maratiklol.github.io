@@ -13,23 +13,13 @@
     <script src="/js/fetch.js" type="text/javascript"></script>
     <script>
         async function loadPage() {
-            dynamicTitle();
-            await fetchCommitDate();
-            await fetchCommitMessage();
             console.time("page loaded in");
-            await sleep(250);
-            document.getElementById('preloader').classList.add('hidden'); 
-            await sleep(350);
-            document.getElementById('preloader').style.display = 'none';
+            dynamicTitle();
             console.timeEnd("page loaded in")
         }
     </script>
 </head>
 <body onload="loadPage()">
-    <div id="preloader">
-        <div class="spinner"></div>
-    </div>
-
     <div class="header">
         <a class="main">
             <div class="name">mrksbgg</div>

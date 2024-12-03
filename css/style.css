@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family="Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 body {
@@ -184,4 +184,58 @@ body {
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
     transition: .2s;
+}
+
+.changelang {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.button-changelang {
+    display: inline-block;
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: .2s;
+    font-family: "JetBrains Mono";
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button-changelang:hover {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    transition: .2s;
+}
+
+.loading-pic {
+    max-width: 500px;
+}
+
+.pre-loader {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background: #141218;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.pre-loader.hidden {
+    animation: fadeOut 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }

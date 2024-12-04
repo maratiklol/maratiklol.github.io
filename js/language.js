@@ -61,14 +61,49 @@ function setPageLang() {
         document.querySelector('.socialsheader').innerHTML = '<b>social pages:</b>';
         document.querySelector('.button-changelang').innerHTML = 'Сменить язык';
     } else if (currLang === null) {
-        document.querySelector('.aka').innerHTML = 'z известен как <b>kreewxq, kittynewyork.';
+        (async function () {
+            try {
+                const response = await fetch('https://ipv4.geojs.io/');
+                const text = await response.text();
+        
+                const countryMatch = text.match(/\(([^)]+)\)/);
+                const countryCode = countryMatch ? countryMatch[1] : null;
 
-        document.querySelector('.nameage').innerHTML = 'я <b>марат,</b> мне <b>15.</b>';
-        document.querySelector('.city').innerHTML = 'живу в <b>казани.';
-        document.querySelector('.bd').innerHTML = 'день рождения: <b>18 февраля.';
-    
-        document.querySelector('.socialsheader').innerHTML = '<b>соц. сети:</b>';
-        document.querySelector('.button-changelang').innerHTML = 'Change language';
+                if (countryCode === "US") {
+                    setCookie("lang", "EN", 1337);
+                    document.querySelector('.aka').innerHTML = 'also known as <b>kreewxq, kittynewyork.';
+
+                    document.querySelector('.nameage').innerHTML = 'my name is <b>marat,</b> im <b>15.';
+                    document.querySelector('.city').innerHTML = 'i live in <b>kazan.</b>';
+                    document.querySelector('.bd').innerHTML = 'bd: <b>feb 18.</b>';
+                
+                    document.querySelector('.socialsheader').innerHTML = '<b>social pages:</b>';
+                    document.querySelector('.button-changelang').innerHTML = 'Сменить язык';
+                } else if (countryCode === "RU" || countryCode === "BY" || countryCode === "KZ"|| countryCode === "UA") {
+                    setCookie("lang", "RU", 1337);
+                    document.querySelector('.aka').innerHTML = 'известен как <b>kreewxq, kittynewyork.';
+
+                    document.querySelector('.nameage').innerHTML = 'я <b>марат,</b> мне <b>15.</b>';
+                    document.querySelector('.city').innerHTML = 'живу в <b>казани.';
+                    document.querySelector('.bd').innerHTML = 'день рождения: <b>18 февраля.';
+                
+                    document.querySelector('.socialsheader').innerHTML = '<b>соц. сети:</b>';
+                    document.querySelector('.button-changelang').innerHTML = 'Change language';
+                } else {
+                    setCookie("lang", "EN", 1337);
+                    document.querySelector('.aka').innerHTML = 'also known as <b>kreewxq, kittynewyork.';
+
+                    document.querySelector('.nameage').innerHTML = 'my name is <b>marat,</b> im <b>15.';
+                    document.querySelector('.city').innerHTML = 'i live in <b>kazan.</b>';
+                    document.querySelector('.bd').innerHTML = 'bd: <b>feb 18.</b>';
+                
+                    document.querySelector('.socialsheader').innerHTML = '<b>social pages:</b>'
+                }
+            } catch (error) {
+                console.error("Ошибка при запросе:", error);
+            }
+        })();
+
     }
 }
 

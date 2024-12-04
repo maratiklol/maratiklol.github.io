@@ -226,16 +226,12 @@ body {
     align-items: center;
     height: 100%;
     width: 100%;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 1;
+    visibility: visible;
 }
 
 .pre-loader.hidden {
-    animation: fadeOut 2s;
-    animation-fill-mode: both;
-}
-
-@keyframes fadeOut {
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
+    opacity: 0;
+    visibility: hidden;
 }

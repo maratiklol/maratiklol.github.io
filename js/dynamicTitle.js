@@ -5,12 +5,16 @@ function sleep(ms) {
 async function dynamicTitle() {
   let index = 0;
   const url = "https://mrksbgg.is-a.dev/";
+  const localurl = "http://localhost:5500/";
+  const localurlindex = "http://localhost:5500/index.html";
   let titles;
 
   if (document.title === "ты потерялся.") {
     titles = ["где я?", "ты потерялся."];
   } else if (window.location.href === url) {
     titles = ["mrksbgg", "mrksbgg >.<"];
+  } else if (window.location.href === localurl || window.location.href === localurlindex) {
+    titles = ["mrksbgg (localhost)", "mrksbgg (localhost)"];
   } else {
     titles = [document.title];
   }

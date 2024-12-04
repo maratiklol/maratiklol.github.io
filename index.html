@@ -23,8 +23,12 @@
     </script>
     <script type='text/javascript'>
         window.addEventListener('load', function () {
-            document.querySelector('.pre-loader').className += ' hidden';
+            const preloader = document.querySelector('.pre-loader');
+            setTimeout(() => {
+                preloader.classList.add('hidden');
+            }, 700);
         });
+        
     </script>
 </head>
 <body onload="loadPage()">
@@ -58,7 +62,7 @@
                 <a target="_blank" href="https://www.donationalerts.com/r/mrksbgg" class="button-primary">Donate</a>
             </div>
             <div class="changelang">
-                <a target="_blank" onclick='changeLang()' class="button-changelang">Change Language</a>
+                <a target="_blank" onclick='changeLang()' class="button-changelang">Change language</a>
             </div>
         </a>
     </div>

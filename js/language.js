@@ -98,6 +98,7 @@ function setPageLang() {
                     document.querySelector('.bd').innerHTML = 'bd: <b>feb 18.</b>';
                 
                     document.querySelector('.socialsheader').innerHTML = '<b>social pages:</b>'
+                    document.querySelector('.button-changelang').innerHTML = 'Сменить язык';
                 }
             } catch (error) {
                 console.error("Ошибка при запросе:", error);

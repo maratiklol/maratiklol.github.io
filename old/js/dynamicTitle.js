@@ -4,9 +4,9 @@ function sleep(ms) {
 
 async function dynamicTitle() {
   let index = 0;
-  const url = "https://mrksbgg.is-a.dev/";
-  const localurl = "http://localhost:5500/";
-  const localurlindex = "http://localhost:5500/index.html";
+  const url = "https://mrksbgg.ru/old";
+  const localurl = "http://localhost:5500/old/";
+  const localurlindex = "http://localhost:5500/old/index.html";
   let titles;
 
   if (document.title === "ты потерялся.") {

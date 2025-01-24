@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mrksbgg</title>
+    <meta name="description" content="Сайт 15-летнего разработчика из Казани. Тут ссылки на мои соц. сети.">
+    <link rel="shortcut icon" href=".//old/assets/favicon.ico">
+    <link rel="manifest" href=".//old/assets/site.webmanifest">
+    <link rel="stylesheet" href="/old/css/style.css">
+    <meta name="google-site-verification" content="vRL_nuCjIUeAzwDbgj7D1CVxwNqea8VEWQBNT22DYPc" />
+    <script src="/js/dynamicTitle.js" type="text/javascript"></script>
+    <script src="/js/language.js" type="text/javascript"></script>
+    <script>
+        async function loadPage() {
+            console.time("page loaded in");
+            dynamicTitle();
+            setPageLang();
+            console.timeEnd("page loaded in")
+            // alert("your browser language: " + navigator.language || navigator.userLanguage);
+        }
+    </script>
+    <script type='text/javascript'>
+        window.addEventListener('load', function () {
+            const preloader = document.querySelector('.pre-loader');
+            setTimeout(() => {
+                preloader.classList.add('hidden');
+            }, 700);
+        });
+        
+    </script>
+</head>
+<body onload="loadPage()">
+    <div class='pre-loader'>
+        <img class='loading-pic' alt='loading' src="/old/assets/preloader.jpg"/>
+    </div>
+
+    <div class="header">
+        <a class="main">
+            <div class="name">mrksbgg</div>
+            <div class="aka"></div>
+        </a>
+    </div>
+
+    <div class="aboutme">
+        <a class="whoami">
+            <div class="nameage"></div>
+            <div class="city"></div>
+            <div class="bd"></div>
+        </a>
+
+        <a class="socials">
+            <div class="socialsheader"></div>
+            <div class="socialsbuttons">
+                <a target="_blank" href="https://t.me/kreewxq" class="button-primary">Telegram</a>
+                <a target="_blank" href="https://github.com/mrksbgg" class="button-primary">GitHub</a>
+                <a target="_blank" href="https://steamcommunity.com/id/unavailablebtw" class="button-primary">Steam</a>
+                <a target="_blank" href="https://discord.com/users/1097383143708827679" class="button-primary">Discord</a>
+                <a target="_blank" href="https://youtube.com/@kreewxq" class="button-primary">YouTube</a>
+                <a target="_blank" href="https://instagram.com/mrksbgg" class="button-primary">Instagram</a>
+                <a target="_blank" href="https://www.donationalerts.com/r/mrksbgg" class="button-primary">Donate</a>
+            </div>
+            <div class="changelang">
+                <a target="_blank" onclick='changeLang()' class="button-changelang">Change language</a>
+            </div>
+        </a>    
+    </div>
+</body>
+</html>

@@ -1,237 +1,281 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-
 body {
-    --md-sys-color-primary: rgb(208 188 254);
-    --md-sys-color-surface-tint: rgb(208 188 254);
-    --md-sys-color-on-primary: rgb(55 38 93);
-    --md-sys-color-primary-container: rgb(78 61 117);
-    --md-sys-color-on-primary-container: rgb(233 221 255);
-    --md-sys-color-secondary: rgb(204 194 219);
-    --md-sys-color-on-secondary: rgb(51 45 65);
-    --md-sys-color-secondary-container: rgb(74 68 88);
-    --md-sys-color-on-secondary-container: rgb(232 222 248);
-    --md-sys-color-tertiary: rgb(240 184 199);
-    --md-sys-color-on-tertiary: rgb(74 37 49);
-    --md-sys-color-tertiary-container: rgb(99 59 72);
-    --md-sys-color-on-tertiary-container: rgb(255 217 226);
-    --md-sys-color-error: rgb(255 180 171);
-    --md-sys-color-on-error: rgb(105 0 5);
-    --md-sys-color-error-container: rgb(147 0 10);
-    --md-sys-color-on-error-container: rgb(255 218 214);
-    --md-sys-color-background: rgb(20 18 24);
-    --md-sys-color-on-background: rgb(230 224 232);
-    --md-sys-color-surface: rgb(20 18 24);
-    --md-sys-color-on-surface: rgb(230 224 232);
-    --md-sys-color-surface-variant: rgb(73 69 78);
-    --md-sys-color-on-surface-variant: rgb(202 196 207);
-    --md-sys-color-outline: rgb(148 143 153);
-    --md-sys-color-outline-variant: rgb(73 69 78);
-    --md-sys-color-shadow: rgb(0 0 0);
-    --md-sys-color-scrim: rgb(0 0 0);
-    --md-sys-color-inverse-surface: rgb(230 224 232);
-    --md-sys-color-inverse-on-surface: rgb(50 47 53);
-    --md-sys-color-inverse-primary: rgb(102 85 142);
-    --md-sys-color-primary-fixed: rgb(233 221 255);
-    --md-sys-color-on-primary-fixed: rgb(33 15 71);
-    --md-sys-color-primary-fixed-dim: rgb(208 188 254);
-    --md-sys-color-on-primary-fixed-variant: rgb(78 61 117);
-    --md-sys-color-secondary-fixed: rgb(232 222 248);
-    --md-sys-color-on-secondary-fixed: rgb(30 25 43);
-    --md-sys-color-secondary-fixed-dim: rgb(204 194 219);
-    --md-sys-color-on-secondary-fixed-variant: rgb(74 68 88);
-    --md-sys-color-tertiary-fixed: rgb(255 217 226);
-    --md-sys-color-on-tertiary-fixed: rgb(49 16 28);
-    --md-sys-color-tertiary-fixed-dim: rgb(240 184 199);
-    --md-sys-color-on-tertiary-fixed-variant: rgb(99 59 72);
-    --md-sys-color-surface-dim: rgb(20 18 24);
-    --md-sys-color-surface-bright: rgb(59 56 62);
-    --md-sys-color-surface-container-lowest: rgb(15 13 19);
-    --md-sys-color-surface-container-low: rgb(29 27 32);
-    --md-sys-color-surface-container: rgb(33 31 36);
-    --md-sys-color-surface-container-high: rgb(43 41 47);
-    --md-sys-color-surface-container-highest: rgb(54 52 58);
-
-    background: var(--md-sys-color-background);
-
-    cursor: default;
-    -webkit-touch-callout: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-
-}
-
-.main {
-    font-size: 25px;
-    font-weight: 600;
-    text-align: center;
-    flex-direction: row;
+    margin: 0;
+    height: 100vh;
+    background-color: black;
     color: white;
-    font-family: "JetBrains Mono";
-}
-
-.pointer {
-    cursor: pointer;
-}
-
-.header {
-    padding: 16px;
-    margin: 0px;
-    width: auto;
-    height: auto;
-}
-
-.name {
-    font-size: 35px;
-    margin-bottom: 10px;
-    font-weight: 700;
-    text-align: center;
-    flex-direction: row;
-    color: white;
-    font-family: "JetBrains Mono";
-}
-
-.aka {
-    font-size: 25px;
-    font-weight: 200;
-    text-align: center;
-    flex-direction: row;
-    color: white;
-    font-family: "JetBrains Mono";
-}
-
-.aboutme {
-    padding: 16px;
-    margin: 0px;
-    width: auto;
-    height: auto;
-}
-
-.whoami {
-    font-size: 25px;
-    font-weight: 200;
-    text-align: center;
-    flex-direction: row;
-    color: white;
-    font-family: "JetBrains Mono";
-}
-
-.socials {
-    font-size: 25px;
-    font-weight: 200;
-    text-align: center;
-    color: white;
-    font-family: "JetBrains Mono";
-}
-
-.socialsheader {
-    margin-top: 25px;
-    margin-bottom: 10px;
-    font-size: 25px;
-    font-weight: 200;
-    text-align: center;
-    color: white;
-    font-family: "JetBrains Mono";
-}
-
-.socialsbuttons {
-    margin: 0 auto;
-    text-align: center
-}
-
-.projects {
-    font-size: 25px;
-    font-weight: 200;
-    text-align: center;
-    color: white;
-    font-family: "JetBrains Mono";
-}
-
-.projectsheader {
-    margin-top: 25px;
-    margin-bottom: 10px;
-    font-size: 25px;
-    font-weight: 200;
-    text-align: center;
-    color: white;
-    font-family: "JetBrains Mono";
-}
-
-.projectsbuttons {
-    margin: 0 auto;
-    text-align: center
-}
-
-.button-primary {
-    display: inline-block;
-    background: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 20px;
-    transition: .2s;
-    margin: 3px;
-    font-family: "JetBrains Mono";
-    font-size: 16px; 
-    font-weight: bold; 
-    cursor: pointer;
-}
-  
-.button-primary:hover {
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-    transition: .2s;
-}
-
-.changelang {
-    margin-top: 80px;
-    text-align: center;
-}
-
-.button-changelang {
-    display: inline-block;
-    background: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 20px;
-    transition: .2s;
-    font-family: "JetBrains Mono";
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.button-changelang:hover {
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-    transition: .2s;
-}
-
-.loading-pic {
-    max-width: 500px;
-}
-
-.pre-loader {
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    background: #141218;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
-    opacity: 1;
-    visibility: visible;
+    flex-direction: column;
+    -webkit-overflow-Y: hidden;
+    -moz-overflow-Y: hidden;
+    -o-overflow-Y: hidden;
+    overflow-y: hidden;
+    -webkit-animation: fadeIn 1 1s ease-out;
+    -moz-animation: fadeIn 1 1s ease-out;
+    -o-animation: fadeIn 1 1s ease-out;
+    animation: fadeIn 1 1s ease-out;
 }
 
-.pre-loader.hidden {
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 50px;
+    margin: 0;
+    text-shadow: 0px 0px 3px white;
+}
+
+.header p {
+    font-size: 25px;
+    margin: 5px 0;
+    text-shadow: 0px 0px 15px white;
+}
+
+.light {
+    position: absolute;
+    width: 0px;
+    opacity: .75;
+    background-color: white;
+    box-shadow: #e9f1f1 0px 0px 20px 2px;
     opacity: 0;
-    visibility: hidden;
+    top: 100vh;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+
+.x1{
+  -webkit-animation: floatUp 7s infinite linear;
+  -moz-animation: floatUp 7s infinite linear;
+  -o-animation: floatUp 7s infinite linear;
+  animation: floatUp 7s infinite linear;
+  -webkit-transform: scale(1.6);
+  -moz-transform: scale(1.6);
+  -o-transform: scale(1.6);
+  transform: scale(1.6);
+  left: 15%;
+}
+
+.x2{
+  -webkit-animation: floatUp 2.5s infinite linear;
+  -moz-animation: floatUp 2.5s infinite linear;
+  -o-animation: floatUp 2.5s infinite linear;
+  animation: floatUp 2.5s infinite linear;
+  -webkit-transform: scale(.5);
+  -moz-transform: scale(.5);
+  -o-transform: scale(.5);
+  transform: scale(.5);
+  left: -15%;
+}
+
+.x3{
+  -webkit-animation: floatUp 4.5s infinite linear;
+  -moz-animation: floatUp 4.5s infinite linear;
+  -o-animation: floatUp 4.5s infinite linear;
+  animation: floatUp 4.5s infinite linear;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+  left: -34%;
+}
+
+.x4{
+  -webkit-animation: floatUp 8s infinite linear;
+  -moz-animation: floatUp 8s infinite linear;
+  -o-animation: floatUp 8s infinite linear;
+  animation: floatUp 8s infinite linear;
+  -webkit-transform: scale(2.2);
+  -moz-transform: scale(2.2);
+  -o-transform: scale(2.2);
+  transform: scale(2.2);
+  left: -57%;
+}
+
+.x5{
+  -webkit-animation: floatUp 3s infinite linear;
+  -moz-animation: floatUp 3s infinite linear;
+  -o-animation: floatUp 3s infinite linear;
+  animation: floatUp 3s infinite linear;
+  -webkit-transform: scale(.8);
+  -moz-transform: scale(.8);
+  -o-transform: scale(.8);
+  transform: scale(.8);
+  left: -81%;
+}
+
+.x6{
+  -webkit-animation: floatUp 5.3s infinite linear;
+  -moz-animation: floatUp 5.3s infinite linear;
+  -o-animation: floatUp 5.3s infinite linear;
+  animation: floatUp 5.3s infinite linear;
+  -webkit-transform: scale(3.2);
+  -moz-transform: scale(3.2);
+  -o-transform: scale(3.2);
+  transform: scale(3.2);
+  left: 37%;
+}
+
+.x7{
+  -webkit-animation: floatUp 4.7s infinite linear;
+  -moz-animation: floatUp 4.7s infinite linear;
+  -o-animation: floatUp 4.7s infinite linear;
+  animation: floatUp 4.7s infinite linear;
+  -webkit-transform: scale(1.7);
+  -moz-transform: scale(1.7);
+  -o-transform: scale(1.7);
+  transform: scale(1.7);
+  left: 62%;
+}
+
+.x8{
+  -webkit-animation: floatUp 4.1s infinite linear;
+  -moz-animation: floatUp 4.1s infinite linear;
+  -o-animation: floatUp 4.1s infinite linear;
+  animation: floatUp 4.1s infinite linear;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+  left: 85%;
+}
+
+@-webkit-keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+@-moz-keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+@-o-keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+@keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+
+@-webkit-keyframes fadeIn{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+@-moz-keyframes fadeIn{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+@-o-keyframes fadeIn{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+@keyframes fadeIn{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+@-webkit-keyframes fadeOut{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 0;}
+}
+
+@-moz-keyframes fadeOut{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 0;}
+}
+
+@-o-keyframes fadeOut{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 0;}
+}
+
+@keyframes fadeOut{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 0;}
+}
+
+@-webkit-keyframes finalFade{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 1;}
+}
+
+@-moz-keyframes finalFade{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 1;}
+}
+
+@-o-keyframes finalFade{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 1;}
+}
+
+@keyframes finalFade{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 1;}
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.socials a {
+    color: white;
+    text-decoration: none;
+    align-items: center;
+    font-size: 35px;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.socials a:hover {
+    color: white;
+    text-shadow:0px 0px 42px white;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    align-items: center;
 }

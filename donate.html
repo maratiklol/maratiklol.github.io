@@ -10,25 +10,18 @@
     <meta name="description" content="mrksbgg | 15 y.o. dev">
     <link rel="shortcut icon" href=".//old/assets/favicon.ico">
     <link rel="manifest" href=".//old/assets/site.webmanifest">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/donate.css">
 </head>
 <body>
 
     <div class="header">
-        <h1>Marat Sibagatullin</h1>
-        <p>16 y.o.</p>
+        <h1>donate</h1>
     </div>
 
-    <div class="socials">
-        <a href="https://t.me/kreewxqs" target="_blank">telegram</a>
-        <a href="https://www.instagram.com/mrksbgg" target="_blank">instagram</a>
-        <a href="https://github.com/mrksbgg" target="_blank">github</a>
-        <a href="https://twitch.tv/kreewxq" target="_blank">twitch</a>
-        <a href="https://steamcommunity.com/id/unavailablebtw" target="_blank">steam</a>
-        <a href="https://discord.com/users/1097383143708827679" target="_blank">discord</a>
-        <!-- <a href="http://mrksbgg.ru/api" target="_self">api</a> -->
-        <!-- <a href="https://www.youtube.com/@kreewxq" target="_blank">youtube</a> -->
-        
+    <div class="methods">
+        <a href="https://www.donationalerts.com/r/kreewxq" target="_blank">donationalerts</a>
+        <a onclick="copyWallet()">crypto (ton network)</a>
+        <a href="https://t.me/kreewxqs" target="_blank">other methods</a>
     </div>
 
     <div class='light x1'></div>
@@ -39,5 +32,12 @@
     <div class='light x6'></div>
     <div class='light x7'></div>
     <div class='light x8'></div>
+
+    <script>
+        function copyWallet() {
+          navigator.clipboard.writeText("UQB4pvcVj0v9GNgOL0QM3E0cRcEIqnW9pxJVSELyplp56DRw");
+          alert("wallet copied! network: ton");
+        }
+    </script>
 </body>
 </html>

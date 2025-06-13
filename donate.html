@@ -7,23 +7,36 @@
     <title>mrksbgg</title>
     <meta property="og:title" content="mrksbgg"/>
     <meta property="og:description" content="mrksbgg | Marat Sibagatullin - 16 y.o. dev"/>
-    <meta name="description" content="mrksbgg | Marat Sibagatullin - 16 y.o. dev">
+    <meta name="description" content="Website of Marat Sibagatullin - 16 years old developer from Russia, Kazan.">
+    <meta property="og:url" content="https://mrksbgg.ru/donate">
+    <meta property="og:image" content="https://mrksbgg.ru/assets/android-chrome-512x512.png">
+    <meta property="og:type" content="website">
     <link rel="shortcut icon" href="/assets/favicon.ico">
     <link rel="manifest" href="/assets/site.webmanifest">
     <link rel="stylesheet" href="/css/donate.css">
     <script src="https://app.rybbit.io/api/script.js" data-site-id="351" defer></script>
 </head>
 <body>
+    <div id="intro">
+        <button id="start-btn" onclick="revealSite()">click to open</button>
+    </div>
+
+    <video id="video-bg" src="/assets/bg_faststart_nvenc.mp4" loop muted preload="auto"></video>
+
+    <div class="overlay"></div>
+
     <div class="header">
         <h1>donate</h1>
     </div>
 
     <div class="methods">
+        <a onclick="muter(this)" target="_self" class="volumeControl">mute music</a>
         <a href="#" onclick="copyWallet();return false;">crypto (ton network)</a>
         <a href="https://www.donationalerts.com/r/kreewxq" target="_blank">donationalerts</a>
         <a href="https://t.me/kreewxqs" target="_blank">other methods</a>
     </div>
 
+    <!-- disabled, no need cuz video bg
     <div class='light x1'></div>
     <div class='light x2'></div>
     <div class='light x3'></div>
@@ -32,12 +45,30 @@
     <div class='light x6'></div>
     <div class='light x7'></div>
     <div class='light x8'></div>
+    -->
     
     <script>
         function copyWallet() {
           navigator.clipboard.writeText("UQB4pvcVj0v9GNgOL0QM3E0cRcEIqnW9pxJVSELyplp56DRw");
           alert("wallet copied!\naccepting only in ton network!");
         }
+
+        const video = document.getElementById('video-bg');
+        const progressBar = document.getElementById('progress-bar');
+        const startBtn = document.getElementById('start-btn');
+        
+        function revealSite() {
+            const intro = document.getElementById('intro');
+            intro.style.opacity = '0';
+            setTimeout(() => {
+                intro.style.display = 'none';
+                video.muted = false;
+                video.volume = 0.4;
+                video.play().catch(() => {});
+                video.classList.add('fade-in');
+            }, 500);
+        }
+
     </script>
 </body>
 </html>

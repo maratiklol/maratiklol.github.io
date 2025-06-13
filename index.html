@@ -8,8 +8,6 @@
     <meta property="og:title" content="mrksbgg"/>
     <meta property="og:description" content="mrksbgg | Marat Sibagatullin - 16 y.o. dev"/>
     <meta name="description" content="Website of Marat Sibagatullin - 16 years old developer from Russia, Kazan.">
-    <meta property="og:title" content="mrksbgg">
-    <meta property="og:description" content="mrksbgg | Marat Sibagatullin - 16 y.o. dev">
     <meta property="og:url" content="https://mrksbgg.ru">
     <meta property="og:image" content="https://mrksbgg.ru/assets/android-chrome-512x512.png">
     <meta property="og:type" content="website">
@@ -17,16 +15,25 @@
     <link rel="shortcut icon" href="/assets/favicon.ico">
     <link rel="manifest" href="/assets/site.webmanifest">
     <link rel="stylesheet" href="/css/style.css">
-    <script src="js/main.js"></script>
     <script src="https://app.rybbit.io/api/script.js" data-site-id="351" defer></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
+    <div id="intro">
+        <button id="start-btn" onclick="revealSite()">click to open</button>
+    </div>
+
+    <video id="video-bg" src="/assets/bg_faststart_nvenc.mp4" loop muted preload="auto"></video>
+
+    <div class="overlay"></div>
+
     <div class="header">
         <h1>Marat Sibagatullin</h1>
         <p>16 y.o.</p>
     </div>
 
     <div class="socials">
+        <a onclick="muter(this)" target="_self" class="volumeControl">mute music</a>
         <a href="https://t.me/kreewxqs" target="_blank">telegram</a>
         <a href="https://www.instagram.com/mrksbgg" target="_blank">instagram</a>
         <a href="https://github.com/mrksbgg" target="_blank">github</a>
@@ -37,6 +44,7 @@
         <a href="https://mrksbgg.ru/donate" target="_self">donate</a>
     </div>
 
+    <!-- disabled, no need cuz video bg
     <div class='light x1'></div>
     <div class='light x2'></div>
     <div class='light x3'></div>
@@ -45,5 +53,39 @@
     <div class='light x6'></div>
     <div class='light x7'></div>
     <div class='light x8'></div>
+    -->
+
+    <script>
+        const video = document.getElementById('video-bg');
+        const progressBar = document.getElementById('progress-bar');
+        const startBtn = document.getElementById('start-btn');
+
+        function revealSite() {
+            const intro = document.getElementById('intro');
+            intro.style.opacity = '0';
+            setTimeout(() => {
+                intro.style.display = 'none';
+                video.muted = false;
+                video.volume = 0.4;
+                video.play().catch(() => {});
+                video.classList.add('fade-in');
+            }, 500);
+        }
+
+
+        let isMuted = false;
+
+        function muter(el) {
+            if (!isMuted) {
+                video.volume = 0.0;
+                el.textContent = 'unmute music';
+                isMuted = true;
+            } else {
+                video.volume = 0.4;
+                el.textContent = 'mute music';
+                isMuted = false;
+            }
+        }
+    </script>
 </body>
 </html>

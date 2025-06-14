@@ -16,6 +16,7 @@
     <link rel="manifest" href="/assets/site.webmanifest">
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://app.rybbit.io/api/script.js" data-site-id="351" defer></script>
+    <script type='text/javascript' src="https://wurfl.io/wurfl.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
@@ -23,7 +24,7 @@
         <button id="start-btn" onclick="revealSite()">click to open</button>
     </div>
 
-    <video id="video-bg" src="/assets/bg_faststart_nvenc.mp4" loop muted preload="auto"></video>
+    <video id="video-bg" loop muted preload="auto"></video>
 
     <div class="overlay"></div>
 
@@ -57,8 +58,13 @@
 
     <script>
         const video = document.getElementById('video-bg');
-        const progressBar = document.getElementById('progress-bar');
         const startBtn = document.getElementById('start-btn');
+        
+        if (WURFL.form_factor === "Smartphone") {
+            video.src = "/assets/bg_faststart_nvenc_phone.mp4";
+        } else {
+            video.src = "/assets/bg_faststart_nvenc.mp4";
+        }
 
         function revealSite() {
             const intro = document.getElementById('intro');

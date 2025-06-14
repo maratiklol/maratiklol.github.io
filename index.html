@@ -60,7 +60,7 @@
         const video = document.getElementById('video-bg');
         const startBtn = document.getElementById('start-btn');
         
-        if (WURFL.form_factor === "Smartphone") {
+        if (WURFL.form_factor === "Smartphone" || WURFL.form_factor === "Feature Phone") {
             video.src = "/assets/bg_faststart_nvenc_phone.mp4";
         } else {
             video.src = "/assets/bg_faststart_nvenc.mp4";

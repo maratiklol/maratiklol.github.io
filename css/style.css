@@ -181,4 +181,5 @@ body {
 
 .volumeControl {
   margin-bottom: 50px;
+  cursor: pointer;
 }

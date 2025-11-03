@@ -58,7 +58,8 @@
           } catch (err) {
             console.error("Ошибка при получении трека:", err);
             document.getElementById("now-playing").textContent = "Стрим недоступен";
-            document.getElementById("listeners").innerHTML = `Когда запуск? Узнайте в нашем <a href="https://t.me/Ishak_FM" id="telegram-fm" target="_blank">Telegram канале @Ishak_FM</a>`;
+            document.getElementById("listeners").innerHTML = 
+              `Когда запуск? Узнайте в нашем <a href="https://t.me/Ishak_FM" target="_blank" id="tglink"><span class="telegram-link">Telegram канале @Ishak_FM</span></a>`;
           }
         }
 

@@ -90,19 +90,16 @@ body {
   text-decoration: underline;
 }
 
-#telegram-fm {
+.telegram-link {
     color: #ffffff;
     text-decoration: none;
 }
 
-#telegram-fm:hover {
-    text-decoration: underline;
+#tglink {
+    color: #ffffff;
+    text-decoration: none;
 }
 
-#telegram-fm, 
-#telegram-fm:visited, 
-#telegram-fm:hover, 
-#telegram-fm:active {
-    color: #ffffff !important;
-    text-decoration: none;
+.telegram-link:hover {
+    text-decoration: underline;
 }

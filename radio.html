@@ -19,8 +19,11 @@
 <body>
     <div class="header">
         <h1>Ishak FM</h1>
-        <p>Работает раз в 7 рабочих дней.</p>
-        <p>Хостится на моём компьютере.</p>
+        <p id="now-playing">Сейчас играет: Загрузка...</p>
+        <p id="listeners">Слушателей: Загрузка...</p>
+        <p class="telegram" id="telegram">
+            Если имеются вопросы, задайте их мне в <a href="https://t.me/steamhvh" target="_blank">Telegram.</a>
+        </p>
     </div>
 
     <div class='light x1'></div>
@@ -36,5 +39,30 @@
       <source src="https://home.maratik.lol/stream" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
+
+    <script>
+        async function getTrackData() {
+          try {
+            const res = await fetch("https://home.maratik.lol/status-json.xsl");
+            const buffer = await res.arrayBuffer();
+        
+            const text = new TextDecoder("UTF-8").decode(buffer);
+        
+            const data = JSON.parse(text);
+            const source = data.icestats.source;
+        
+            const title = source.title;
+            const listeners = source.listeners;
+            document.getElementById("now-playing").innerHTML = `Сейчас играет:<br>${title}`;
+            document.getElementById("listeners").textContent = `Слушателей: ${listeners}`;
+          } catch (err) {
+            console.error("Ошибка при получении трека:", err);
+            document.getElementById("now-playing").textContent = "Стрим недоступен";
+          }
+        }
+
+        getTrackData();
+        setInterval(getTrackData, 5000);
+    </script>
 </body>
 </html>

@@ -1,104 +1,58 @@
 body {
+  position: relative;
   margin: 0;
   height: 100vh;
-  background-color: black;
+  background: radial-gradient(circle at 50% 0%, rgba(138,43,226,0.2), transparent 50%), black;
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  overflow-y: hidden;
-  animation: fadeIn 1s ease-out;
+  overflow: hidden;
   user-select: none;
+  animation: fadeIn 1s ease-out;
+  z-index: 0;
 }
 
 .header {
   text-align: center;
-  margin-bottom: 20px;
-  position: absolute;
 }
 
 .header h1 {
-  font-size: 35px;
-  margin: 0;
+  font-size: 45px;
+  margin: 10px;
   text-shadow: 0px 0px 3px white;
 }
 
 .header p {
-  font-size: 25px;
+  font-size: 16px;
   margin: 5px 0;
   text-shadow: 0px 0px 15px white;
 }
 
 .light {
   position: absolute;
-  width: 0px;
-  opacity: .75;
-  background-color: white;
-  box-shadow: white 0px 0px 20px 2px;
+  width: 0;
+  height: 0;
+  background: #fff;
+  box-shadow: 0 0 25px 10px #d1d1d1;
   opacity: 0;
-  top: -100vh;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
-.x1 {
   animation: floatDown 7s infinite linear;
-  transform: scale(1.6);
-  left: 15%;
+  z-index: -1;
 }
 
-.x2 {
-  animation: floatDown 2.5s infinite linear;
-  transform: scale(.5);
-  left: -15%;
-}
-
-.x3 {
-  animation: floatDown 4.5s infinite linear;
-  transform: scale(1.2);
-  left: -34%;
-}
-
-.x4 {
-  animation: floatDown 8s infinite linear;
-  transform: scale(2.2);
-  left: -57%;
-}
-
-.x5 {
-  animation: floatDown 3s infinite linear;
-  transform: scale(.8);
-  left: -81%;
-}
-
-.x6 {
-  animation: floatDown 5.3s infinite linear;
-  transform: scale(3.2);
-  left: 37%;
-}
-
-.x7 {
-  animation: floatDown 4.7s infinite linear;
-  transform: scale(1.7);
-  left: 62%;
-}
-
-.x8 {
-  animation: floatDown 4.1s infinite linear;
-  transform: scale(0.9);
-  left: 85%;
-}
+.x1 { left: 10%; animation-duration: 6s; transform: scale(1.4); }
+.x2 { left: 30%; animation-duration: 4s; transform: scale(0.8); }
+.x3 { left: 50%; animation-duration: 5.5s; transform: scale(1.2); }
+.x4 { left: 70%; animation-duration: 7s; transform: scale(1.7); }
+.x5 { left: 90%; animation-duration: 4.2s; transform: scale(0.9); }
 
 @keyframes floatDown {
-  0% { top: -100vh; opacity: 0; }
-  25% { opacity: 1; }
-  50% { top: 50vh; opacity: .8; }
-  75% { opacity: 1; }
-  100% { top: 100vh; opacity: 0; }
+  0% { top: -100px; opacity: 0; }
+  30% { opacity: 1; }
+  70% { opacity: 1; top: 100vh; }
+  100% { opacity: 0; top: 120vh; }
 }
 
 @keyframes fadeIn {
@@ -106,6 +60,32 @@ body {
   to { opacity: 1; }
 }
 
-.player {
-    padding-top: 200px;
+#now-playing {
+  font-size: 18px;
+  margin-top: -11px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+#listeners {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+#telegram {
+  font-size: 18px;
+  margin-top: 2px;
+  margin-bottom: 25px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.telegram a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.telegram a:hover {
+  text-decoration: underline;
 }

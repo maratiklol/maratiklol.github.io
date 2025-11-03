@@ -98,3 +98,11 @@ body {
 #telegram-fm:hover {
     text-decoration: underline;
 }
+
+#telegram-fm, 
+#telegram-fm:visited, 
+#telegram-fm:hover, 
+#telegram-fm:active {
+    color: #ffffff !important;
+    text-decoration: none;
+}

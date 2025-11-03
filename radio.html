@@ -22,7 +22,7 @@
         <p id="now-playing">Сейчас играет: Загрузка...</p>
         <p id="listeners">Слушателей: Загрузка...</p>
         <p class="telegram" id="telegram">
-            Если имеются вопросы, задайте их мне в <a href="https://t.me/steamhvh" target="_blank">Telegram.</a>
+            Вопросы? <a href="https://t.me/steamhvh" target="_blank">Telegram: @steamhvh</a>
         </p>
     </div>
 
@@ -58,6 +58,7 @@
           } catch (err) {
             console.error("Ошибка при получении трека:", err);
             document.getElementById("now-playing").textContent = "Стрим недоступен";
+            document.getElementById("listeners").innerHTML = `Когда запуск? Узнайте в нашем <a href="https://t.me/Ishak_FM" id="telegram-fm" target="_blank">Telegram канале @Ishak_FM</a>`;
           }
         }
 

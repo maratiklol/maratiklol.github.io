@@ -89,3 +89,12 @@ body {
 .telegram a:hover {
   text-decoration: underline;
 }
+
+#telegram-fm {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#telegram-fm:hover {
+    text-decoration: underline;
+}

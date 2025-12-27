@@ -29,14 +29,14 @@
     <div class='light x8'></div>
 
     <audio class="player" controls autoplay>
-      <source src="https://home.maratik.lol/stream" type="audio/mpeg">
+      <source src="https://home.xeon.lol/stream" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
 
     <script>
         async function getTrackData() {
           try {
-            const res = await fetch("https://home.maratik.lol/status-json.xsl");
+            const res = await fetch("https://home.xeon.lol/status-json.xsl");
             const buffer = await res.arrayBuffer();
         
             const text = new TextDecoder("UTF-8").decode(buffer);

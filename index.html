@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mrksbgg</title>
-    <meta property="og:title" content="mrksbgg"/>
-    <meta property="og:description" content="mrksbgg | Marat Sibagatullin - 16 y.o. dev"/>
+    <meta property="og:title" content="mrksbgg" />
+    <meta property="og:description" content="mrksbgg | Marat Sibagatullin - 17 y.o. dev" />
     <meta name="description" content="Website of Marat Sibagatullin - 16 years old developer from Russia, Kazan.">
     <meta property="og:url" content="https://xeon.lol">
     <meta property="og:image" content="https://xeon.lol/assets/android-chrome-512x512.png">
@@ -18,78 +19,136 @@
     <script type='text/javascript' src="https://wurfl.io/wurfl.js"></script>
     <script src="js/main.js"></script>
 </head>
+
 <body>
-    <div id="intro">
-        <button id="start-btn" onclick="revealSite()">click to open</button>
-    </div>
-
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
     <video id="video-bg" loop muted preload="auto"></video>
-
     <div class="overlay"></div>
 
-    <div class="header">
-        <h1>Marat Sibagatullin</h1>
-        <p>16 y.o.</p>
+    <div class="liquid-bg">
+        <div class="blob b1"></div>
+        <div class="blob b2"></div>
+        <div class="blob b3"></div>
     </div>
 
-    <div class="socials">
-        <a onclick="muter(this)" target="_self" class="volumeControl">mute music</a>
-        <a href="https://t.me/steamhvh" target="_blank">telegram</a>
-        <a href="https://www.instagram.com/mrksbgg" target="_blank">instagram</a>
-        <a href="https://github.com/mrksbgg" target="_blank">github</a>
-        <a href="https://twitch.tv/kreewxq" target="_blank">twitch</a>
-        <a href="https://steamcommunity.com/id/kreewxq" target="_blank">steam</a>
-        <a href="https://discord.com/users/1097383143708827679" target="_blank">discord</a>
-        <a href="https://x.com/kreewxq" target="_self">twitter</a>
-        <!-- <a href="https://xeon.lol/donate" target="_self">donate</a> -->
-    </div>
+    <main class="glass-container">
+        <div class="glass-card">
+            <header class="header">
+                <h1>Marat Sibagatullin</h1>
+                <div class="status-indicator">
+                    <span class="status-text">17 y.o.</span>
+                </div>
+            </header>
 
-    <!-- disabled, no need cuz video bg
-    <div class='light x1'></div>
-    <div class='light x2'></div>
-    <div class='light x3'></div>
-    <div class='light x4'></div>
-    <div class='light x5'></div>
-    <div class='light x6'></div>
-    <div class='light x7'></div>
-    <div class='light x8'></div>
-    -->
+            <nav class="socials-grid">
+                <a href="https://t.me/steamhvh" target="_blank" class="social-item" data-label="Telegram">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.06-.14-.04-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .24z" />
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/mrksbgg" target="_blank" class="social-item" data-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.069-4.85.069-3.204 0-3.585-.011-4.849-.069-3.259-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+                    </svg>
+                </a>
+                <a href="https://github.com/mrksbgg" target="_blank" class="social-item" data-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+                <a href="https://steamcommunity.com/id/kreewxq" target="_blank" class="social-item" data-label="Steam">
+                    <svg viewBox="0 0 25 25" fill="currentColor">
+                        <path
+                            d="M18.102 12.129c0-0 0-0 0-0.001 0-1.564 1.268-2.831 2.831-2.831s2.831 1.268 2.831 2.831c0 1.564-1.267 2.831-2.831 2.831-0 0-0 0-0.001 0h0c-0 0-0 0-0.001 0-1.563 0-2.83-1.267-2.83-2.83 0-0 0-0 0-0.001v0zM24.691 12.135c0-2.081-1.687-3.768-3.768-3.768s-3.768 1.687-3.768 3.768c0 2.081 1.687 3.768 3.768 3.768v0c2.080-0.003 3.765-1.688 3.768-3.767v-0zM10.427 23.76l-1.841-0.762c0.524 1.078 1.611 1.808 2.868 1.808 1.317 0 2.448-0.801 2.93-1.943l0.008-0.021c0.155-0.362 0.246-0.784 0.246-1.226 0-1.757-1.424-3.181-3.181-3.181-0.405 0-0.792 0.076-1.148 0.213l0.022-0.007 1.903 0.787c0.852 0.364 1.439 1.196 1.439 2.164 0 1.296-1.051 2.347-2.347 2.347-0.324 0-0.632-0.066-0.913-0.184l0.015 0.006zM15.974 1.004c-7.857 0.001-14.301 6.046-14.938 13.738l-0.004 0.054 8.038 3.322c0.668-0.462 1.495-0.737 2.387-0.737 0.001 0 0.002 0 0.002 0h-0c0.079 0 0.156 0.005 0.235 0.008l3.575-5.176v-0.074c0.003-3.12 2.533-5.648 5.653-5.648 3.122 0 5.653 2.531 5.653 5.653s-2.531 5.653-5.653 5.653h-0.131l-5.094 3.638c0 0.065 0.005 0.131 0.005 0.199 0 0.001 0 0.002 0 0.003 0 2.342-1.899 4.241-4.241 4.241-2.047 0-3.756-1.451-4.153-3.38l-0.005-0.027-5.755-2.383c1.841 6.345 7.601 10.905 14.425 10.905 8.281 0 14.994-6.713 14.994-14.994s-6.713-14.994-14.994-14.994c-0 0-0.001 0-0.001 0h0z" />
+                    </svg>
+                </a>
+                <a href="https://discord.com/users/1097383143708827679" target="_blank" class="social-item"
+                    data-label="Discord">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-2.313-9.111-5.191-13.667a.074.074 0 0 0-.032-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.086 2.157 2.419 0 1.334-.956 2.42-2.157 2.42zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.086 2.157 2.419 0 1.334-.946 2.42-2.157 2.42z" />
+                    </svg>
+                </a>
+                <a href="https://x.com/kreewxq" target="_blank" class="social-item" data-label="Twitter">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                    </svg>
+                </a>
+                <a href="https://t.me/FurkVPNbot?start=7517909935" target="_blank" class="social-item" data-label="VPN">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0L1.75 4.615v6.523q0 2 .549 3.882c.55 1.884 1.487 3.63 2.81 5.236C6.432 21.862 8.784 23.169 12 24c3.216-.83 5.568-2.138 6.891-3.744a15.7 15.7 0 0 0 2.81-5.236q.55-1.883.549-3.882V4.615zm-.938 17.525l-5.694-5.597 1.876-1.844 3.818 3.743 6.943-6.837 1.876 1.844z" />
+                    </svg>
+                </a>
+            </nav>
+
+            <button onclick="muter(this)" class="mute-text-btn" id="mute-btn">unmute music</button>
+
+        </div>
+    </main>
+
 
     <script>
         const video = document.getElementById('video-bg');
-        const startBtn = document.getElementById('start-btn');
-        
+
+        const muteIcon = document.getElementById('mute-icon');
+        const muteBtn = document.getElementById('mute-btn');
+
+        const iconVolumeUp = '<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>';
+        const iconVolumeOff = '<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73 4.27 3zT12 4L9.91 6.09 12 8.18V4z"/>';
+
         if (WURFL.form_factor === "Smartphone" || WURFL.form_factor === "Feature Phone") {
             video.src = "/assets/bg_faststart_nvenc_phone.mp4";
         } else {
             video.src = "/assets/bg_faststart_nvenc.mp4";
         }
 
-        function revealSite() {
-            const intro = document.getElementById('intro');
-            intro.style.opacity = '0';
-            setTimeout(() => {
-                intro.style.display = 'none';
-                video.muted = false;
-                video.volume = 0.3;
-                video.play().catch(() => {});
-                video.classList.add('fade-in');
-            }, 500);
-        }
+        document.addEventListener('DOMContentLoaded', () => {
+            video.volume = 0.0;
+            video.play().catch(() => { });
+            video.classList.add('fade-in');
+            muteBtn.innerHTML = "unmute music";
 
-        let isMuted = false;
+            const card = document.querySelector('.glass-card');
+            const container = document.querySelector('.glass-container');
+
+            container.addEventListener('mousemove', (e) => {
+                const xAxis = (window.innerWidth / 2 - e.pageX) / 80;
+                const yAxis = (window.innerHeight / 2 - e.pageY) / 80;
+                card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+            });
+
+            container.addEventListener('mouseenter', (e) => {
+                card.style.transition = 'none';
+            });
+
+            container.addEventListener('mouseleave', (e) => {
+                card.style.transition = 'all 0.5s ease';
+                card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+            });
+        });
+
+        let isMuted = true;
 
         function muter(el) {
             if (!isMuted) {
                 video.volume = 0.0;
-                el.textContent = 'unmute music';
+                el.innerHTML = "unmute music";
                 isMuted = true;
             } else {
+                video.muted = false;
                 video.volume = 0.3;
-                el.textContent = 'mute music';
+                el.innerHTML = "mute music";
                 isMuted = false;
+                if (video.paused) video.play();
             }
         }
     </script>
 </body>
+
 </html>

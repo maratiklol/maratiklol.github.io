@@ -1,63 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mrksbgg</title>
-    <link rel="shortcut icon" href="/assets/favicon.ico">
-    <link rel="manifest" href="/assets/site.webmanifest">
-    <link rel="stylesheet" href="/css/radio.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mrksbgg</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="manifest" href="/assets/site.webmanifest">
+  <link rel="stylesheet" href="/css/radio.css">
 </head>
+
 <body>
-    <div class="header">
-        <h1>Ishak FM</h1>
-        <p id="now-playing">Сейчас играет: Загрузка...</p>
-        <p id="listeners">Слушателей: Загрузка...</p>
-        <p class="telegram" id="telegram">
-            Вопросы? <a href="https://t.me/steamhvh" target="_blank">Telegram: @steamhvh</a>
-        </p>
-    </div>
+  <div class="header">
+    <h1>Ishak FM</h1>
+    <p id="now-playing">Сейчас играет: Загрузка...</p>
+    <p id="listeners">Слушателей: Загрузка...</p>
+    <p class="telegram" id="telegram">
+      Вопросы? <a href="https://t.me/steamhvh" target="_blank">Telegram: @steamhvh</a>
+    </p>
+  </div>
 
-    <div class='light x1'></div>
-    <div class='light x2'></div>
-    <div class='light x3'></div>
-    <div class='light x4'></div>
-    <div class='light x5'></div>
-    <div class='light x6'></div>
-    <div class='light x7'></div>
-    <div class='light x8'></div>
+  <div class='light x1'></div>
+  <div class='light x2'></div>
+  <div class='light x3'></div>
+  <div class='light x4'></div>
+  <div class='light x5'></div>
+  <div class='light x6'></div>
+  <div class='light x7'></div>
+  <div class='light x8'></div>
 
-    <audio class="player" controls autoplay>
-      <source src="https://home.xeon.lol/stream" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
+  <audio class="player" controls autoplay>
+    <source src="https://aurora.xeon.lol/stream" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
-    <script>
-        async function getTrackData() {
-          try {
-            const res = await fetch("https://home.xeon.lol/status-json.xsl");
-            const buffer = await res.arrayBuffer();
-        
-            const text = new TextDecoder("UTF-8").decode(buffer);
-        
-            const data = JSON.parse(text);
-            const source = data.icestats.source;
-        
-            const title = source.title;
-            const listeners = source.listeners;
-            document.getElementById("now-playing").innerHTML = `Сейчас играет:<br>${title}`;
-            document.getElementById("listeners").textContent = `Слушателей: ${listeners}`;
-          } catch (err) {
-            console.error("Ошибка при получении трека:", err);
-            document.getElementById("now-playing").textContent = "Стрим недоступен";
-            document.getElementById("listeners").innerHTML = 
-              `Когда запуск? Узнайте в нашем <a href="https://t.me/Ishak_FM" target="_blank" id="tglink"><span class="telegram-link">Telegram канале @Ishak_FM</span></a>`;
-          }
-        }
+  <script>
+    async function getTrackData() {
+      try {
+        const res = await fetch("https://aurora.xeon.lol/status-json.xsl");
+        const buffer = await res.arrayBuffer();
 
-        getTrackData();
-        setInterval(getTrackData, 5000);
-    </script>
+        const text = new TextDecoder("UTF-8").decode(buffer);
+
+        const data = JSON.parse(text);
+        const source = data.icestats.source;
+
+        const title = source.title;
+        const listeners = source.listeners;
+        document.getElementById("now-playing").innerHTML = `Сейчас играет:<br>${title}`;
+        document.getElementById("listeners").textContent = `Слушателей: ${listeners}`;
+      } catch (err) {
+        console.error("Ошибка при получении трека:", err);
+        document.getElementById("now-playing").textContent = "Стрим недоступен";
+        document.getElementById("listeners").innerHTML =
+          `Когда запуск? Узнайте в нашем <a href="https://t.me/steamhvh" target="_blank" id="tglink"><span class="telegram-link">Telegram канале @недоступно</span></a>`;
+      }
+    }
+
+    getTrackData();
+    setInterval(getTrackData, 5000);
+  </script>
 </body>
+
 </html>

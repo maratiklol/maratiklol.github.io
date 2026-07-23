@@ -1,6 +1,3 @@
 User-Agent: *
 Allow: /
-Disallow: /donate
-Disallow: /ref/ozon
-Disallow: /vpn
 Disallow: /404

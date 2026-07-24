@@ -1,16 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xeon.lol</title>
-    <link rel="shortcut icon" href="/assets/favicon.ico">
-    <link rel="manifest" href="/assets/site.webmanifest">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
-    <script src="js/main.js"></script>
+    <script src="/js/main.js" defer></script>
+    <script src="/js/player.js" defer></script>
+    <script type="module" src="/js/lyrics.js"></script>
 </head>
 <body>
-    <h1 class="text">hello</h1>
+    <div class="container">
+        <div class="card music">
+            <img src="/assets/images/track.png" alt="Track cover">
+            <div class="track-info">
+                <h2>крепче</h2>
+                <span>whyspurky</span>
+            </div>
+            <div id="lyrics-container">
+                <p id="current-lyric">...</p>
+            </div>
+            <div class="progress-container">
+                <div class="time-info">
+                    <span id="currentTime">0:00</span>
+                    <span id="durationTime">0:00</span>
+                </div>
+                <input type="range" id="progress" min="0" max="100" value="0">
+            </div>
+            <div class="controls">
+                <button id="toggleBtn">PLAY</button>
+                <div class="volume-container">
+                    <input type="range" id="volume" min="0" max="1" step="0.01" value="0.05">
+                    <span id="volValue">5%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="track" src="/assets/sounds/track.mp3"></audio>
 </body>
 </html>

@@ -1,31 +1,219 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-
-body {
-  margin: 0;
-  height: 100vh;
-  background: #050505;
-  color: white;
-  font-family: 'Inter', sans-serif;
-  overflow: hidden;
-  user-select: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  animation: fadeIn 1s ease forwards;
+:root {
+    --accent-color: #888888;
+    --text-main: #d1d1d1;
+    --glass-bg: rgba(30, 30, 30, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.05);
+    --bg-dark: #121212;
 }
 
-.text {
-  font-size: 50px;
-  font-weight: 600;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Unbounded', cursive;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+img {
+    -webkit-user-drag: none;
+    user-drag: none;
+    pointer-events: none;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    background: radial-gradient(circle at top right, #1a1a1a, #121212 50%, #0a0a0a 100%);
+    color: var(--text-main);
+    overflow-y: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 400px;
+    animation: fadeIn 1.2s ease-out;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
-  to {
+.card {
+    background: var(--glass-bg);
+    border-radius: 30px;
+    padding: 25px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease;
+}
+
+.music {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.music img {
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.track-info h2 {
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.track-info span {
+    font-size: 0.8rem;
+    opacity: 0.4;
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+#toggleBtn {
+    background: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #000000;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+#toggleBtn:hover {
+    background: #cccccc;
+}
+
+.volume-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+#volValue {
+    font-size: 0.7rem;
+    font-weight: 700;
+    min-width: 35px;
+    opacity: 0.5;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    flex-grow: 1;
+    background: transparent;
+    touch-action: pan-x;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 5px;
+    background: #333;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: -4.5px;
+}
+
+#lyrics-container {
+    margin-top: 15px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#current-lyric {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #ffffff;
+    font-weight: 700;
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
     opacity: 1;
-  }
+    transform: translateY(0);
+}
+
+.progress-container {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.time-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.65rem;
+    opacity: 0.5;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+#progress {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    background: #333;
+    border-radius: 2px;
+    outline: none;
+}
+
+#progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 850px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .card {
+        padding: 18px;
+        border-radius: 20px;
+    }
+
+    .music img {
+        max-width: 160px;
+    }
 }
